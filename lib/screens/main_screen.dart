@@ -1,7 +1,9 @@
 import 'package:delivery_app/nav_bar.dart';
 import 'package:delivery_app/nav_model.dart';
+import 'package:delivery_app/screens/check_out.dart';
 import 'package:delivery_app/screens/home.dart';
 import 'package:delivery_app/screens/order.dart';
+import 'package:delivery_app/screens/profil.dart';
 import 'package:delivery_app/screens/search.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +18,8 @@ class _MainScreenState extends State<MainScreen> {
   final homeNavKey = GlobalKey<NavigatorState>();
   final orderNavKey = GlobalKey<NavigatorState>();
   final searchNavKey = GlobalKey<NavigatorState>();
+  final checkoutNavKey = GlobalKey<NavigatorState>();
+  final profilNavKey = GlobalKey<NavigatorState>();
   int selectedScreen = 0;
   List<NavModel> items = [];
   @override
@@ -25,6 +29,8 @@ class _MainScreenState extends State<MainScreen> {
       NavModel(page: const HomePage(), navKey: homeNavKey),
       NavModel(page: const Order() , navKey: orderNavKey),
       NavModel(page: const Search(), navKey: searchNavKey),
+      NavModel(page: const CheckOut(), navKey: checkoutNavKey),
+      NavModel(page: const Profil(), navKey: profilNavKey),
     ];
   }
   @override

@@ -18,9 +18,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      //debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Poppins",
+        scaffoldBackgroundColor: const Color.fromARGB(255, 241, 241, 241)
       ),
       home: MainScreen()
     );
